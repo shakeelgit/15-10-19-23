@@ -1,0 +1,25 @@
+{
+  "firstname": "ABC",
+  "lastname" : "GTE",
+  "email": "123@gmail.com",
+  "password" : "abcd12345!",
+  "newpassword": "abcd12345!",
+  "day"         : "27",
+  "year"        : "1998",
+  "month"        : "May" ,
+  "gender"  : "Male",
+  "course" : ["CA Foundation Exam Form","Articleship Fee","CA Final"],
+  "Fees"   : ["₹11,300","₹39,800"],
+  "YourFullName" : "John J Mathew",
+  "YourEmailHere" : "ABC@gmail.com",
+  "YourContactNo" : "999999999999",
+  "Option1"    : "Online Classes",
+  "Subjects"   : "CA-Final",
+  "Message"  : "Hi I want to Join",
+  "selectthechoice" : "watches for men",
+  "item1"   : "Analog Black Dial Men's Watch-TWEG18508",
+  "item2"  :"Analog Day Date Functioning Stainless Steel Chain Watch for Men"
+ 
+   
+  
+}

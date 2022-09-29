@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-09-27T07:30:44.425Z",
+    "end": "2022-09-27T07:31:19.782Z",
+    "duration": 35357,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e5da6274-a076-4de5-9120-47c51885b485",
+      "title": "",
+      "fullFile": "cypress\\integration\\Verify-Prod-Price.js",
+      "file": "cypress\\integration\\Verify-Prod-Price.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e9c437fd-f656-4fbc-a9c0-30116a7ec67f",
+          "title": "Sum of products",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "To verify sum of products",
+              "fullTitle": "Sum of products To verify sum of products",
+              "timedOut": null,
+              "duration": 31312,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"www.amazon.in\");\ncy.get('#twotabsearchtextbox').type(\"watches for men\");\ncy.get(\"#nav-search-submit-button\").click();\ncy.get(\".s-desktop-width-max.s-desktop-content.s-opposite-dir.sg-row\").find(\".a-link-normal.s-underline-text.s-underline-link-text.s-link-style.a-text-normal\").each(function (el, index, list) {\n  var a = el.text();\n  cy.log(a);\n  if (a.includes(\"Analog Blue Dial Men's Watch-TW000T310\")) {\n    cy.wait(1000);\n    cy.wrap(el).invoke('removeAttr', 'target').click().then(function () {\n      cy.get('#add-to-cart-button').click().then(function () {\n        cy.get('.a-price.sw-subtotal-amount .a-offscreen').then(function (element) {\n          var actualtext = element.text();\n          cy.log(actualtext);\n          var number = Number(actualtext.replace(/[^0-9\\.-]+/g, \"\"));\n          expect(number).to.equal(3199);\n        });\n      });\n    });\n  }\n});",
+              "err": {},
+              "uuid": "42a129f0-6ad1-4404-a0d2-50221a00d0bc",
+              "parentUUID": "e9c437fd-f656-4fbc-a9c0-30116a7ec67f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "42a129f0-6ad1-4404-a0d2-50221a00d0bc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 31312,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
