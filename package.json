@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": ""
+    "test": "node_modules\\.bin\\cypress run",
+    "headTest" : "npm run test -- --headed",
+    "chromeTest" :"npm run test -- --browser chrome",
+    "staticdropdown" : "npm run test -- --spec \"cypress/integration/Staticdropdown/*\""
   },
   "author": "",
   "license": "ISC",

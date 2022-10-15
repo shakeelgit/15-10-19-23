@@ -10,6 +10,8 @@ describe("Amazon Website Testing",()=>{
       
 
         cy.contains('తెలుగు').click()
+        cy.wait(1000)
+        cy.contains("Save Changes").click({force:true})
 
           })  
 
